@@ -9,40 +9,50 @@
 </head>
 <body>
     <main id="app">
+        <section class="gridLayout">
         <header>
             <h1>FINANCING</h1>
         </header>
 
-        <ul>
-            <li v-for="car in cars">
-                <img class="carIcon" @click="showCarData(car)" alt="car icon" v-bind:src="car.img">
-            </li>
-        </ul>
-
+        <nav class="iconNav">
+            <ul>
+                <li v-for="car in cars">
+                    <img class="carIcon" @click="showCarData(car)" alt="car icon" v-bind:src="car.img">
+                </li>
+            </ul>
+        </nav>
 
         <div id="miniImgBox">
             <img alt="mini Display" :src="currentMiniData.img">
         </div>
-        <h2>{{currentMiniData.name}}</h2>
-        <h3>LEASE</h3>
-        <div id="leaseRate">
-            <p>{{currentMiniData.lease_rate}}</p>
 
-        </div>
+        <h2 class="miniName">{{currentMiniData.name}}</h2>
 
-        <div id="leasePay">
-            <p>{{currentMiniData.lease_pay}}</p>
 
-        </div>
+        <div class="leaseBox">
+            <h3 class="lease">LEASE</h3>
+            <div id="leaseRate">
+                <p>Lease Rating of {{currentMiniData.lease_rate}}</p>
 
-        <h3>FINANCE</h3>
+            </div>
+
+            <div id="leasePay">
+                <p>With a monthly Payment of {{currentMiniData.lease_pay}}</p>
+
+            </div>
+    </div>
+    
+    <div class="financeBox">
+        <h3 class="finanace">FINANCE</h3>
         <div id="financeRate">
-            <p>{{currentMiniData.finance_rate}}</p>
+            <p>Finance Rating of {{currentMiniData.finance_rate}}</p>
         </div>
 
         <div id="financePay">
-            <p>{{currentMiniData.finance_pay}}</p>
+            <p>Monthly Fianace Payment of {{currentMiniData.finance_pay}}</p>
         </div>
+    </div>        
+    </section>
     </main>
     <script type="module" src="js/main.js"></script>
     
