@@ -15,38 +15,34 @@
 
         <ul>
             <li v-for="car in cars">
-                <img alt="car icon" v-bind:src="cars.img">
+                <img class="carIcon" @click="showCarData(car)" alt="car icon" v-bind:src="car.img">
             </li>
         </ul>
 
 
         <div id="miniImgBox">
-            <img alt="mini Display" src="images/mini_john.png">
+            <img alt="mini Display" :src="currentMiniData.img">
         </div>
-        <h2>2021 MINI JOHN </h2>
+        <h2>{{currentMiniData.name}}</h2>
         <h3>LEASE</h3>
         <div id="leaseRate">
+            <p>{{currentMiniData.lease_rate}}</p>
 
         </div>
 
         <div id="leasePay">
-
+            <p>{{currentMiniData.lease_pay}}</p>
 
         </div>
 
         <h3>FINANCE</h3>
         <div id="financeRate">
-
+            <p>{{currentMiniData.finance_rate}}</p>
         </div>
 
         <div id="financePay">
-            
+            <p>{{currentMiniData.finance_pay}}</p>
         </div>
-
-
-
-
-
     </main>
     <script type="module" src="js/main.js"></script>
     

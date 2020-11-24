@@ -1,18 +1,15 @@
 import {fetchData} from "./modules/DataMiner.js";
 (()=> {
-	function errorBox(message) {
-		alert("something just isnt wokring right!");
-	}
-
-	function loadCarIcons(data) {
-		
-	}
+	
 
 
 	let vue_vm = new Vue({
-		imageAddress: "images/",
+		
 		data: {
-			cars:[]
+			cars:[],
+			showFinanceData: false,
+			currentMiniData: {},
+			image: "images/mini.png"
 
 		},
 	mounted: function() {
@@ -27,6 +24,13 @@ fetchData("./includes/index.php").then(data => this.cars = data).catch(err => co
 
 	 methods: {	
 
+		showCarData(target) {
+			console.log("recieved mini data", target, target.name);
+
+			this.showFinanceData = this.showFinanceData ? false : true;
+
+			this.currentMiniData = target;
+		}
 	 }
 
 	}).$mount("#app")
