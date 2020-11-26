@@ -1,8 +1,10 @@
 .iconNav{
-    grid-column: 1/7;
+    grid-column: 1/9;
     grid-row: 2;
     justify-self: center;
 }
+
+
 .iconNav ul {
     margin: 0;
 }
@@ -12,7 +14,38 @@
 }
 
 .carIcon {
-    height: 10vw;
+    height: 7vw;
     display: inline-block;
     padding: .5em;
+}
+
+@media all and (min-width: 700px) {
+    .iconNav{
+        grid-column: 2/8;
+        grid-row: 2;
+        justify-self: center;
+    }
+    .iconNav ul {
+        margin: 0;
+    }
+    
+    .iconNav li {
+        display: inline;
+    }
+    
+    .carIcon {
+        height: 10vw;
+        display: inline-block;
+        padding: .5em;
+    }
+}
+
+@media all and (min-width:1400px) {
+    .carIcon {
+        height: 150px;
+    }
+
+
+
+    
 }

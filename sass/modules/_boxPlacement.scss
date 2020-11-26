@@ -1,0 +1,111 @@
+.boxTitle {
+    justify-self: center;
+    grid-row: 1;
+}
+
+.leaseTitle {
+    grid-column: 1/4;
+}
+
+.financetitle {
+    grid-column: 4/7;
+}
+
+.leaseRate {
+    grid-row: 2;
+    grid-column: 1/4;
+    justify-self: center;
+    
+}
+
+.leasePay {
+    grid-row: 3;
+    grid-column: 1/4;
+    justify-self: center;
+}
+
+.financeRate {
+    grid-row: 2;
+    grid-column: 4/7;
+    justify-self: center;
+
+}
+
+.financePay {
+    grid-row: 3;
+    grid-column: 4/7;
+    justify-self: center;
+
+}
+
+.box {
+    display: grid;
+}
+
+.space {
+    justify-self: center;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+}
+
+
+
+@media all and(min-width: 700px) {
+
+    .paymentData {
+        grid-column: 1/9;
+        grid-row: 5;
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        gap: 10px;
+        padding-bottom: 30px;
+    }
+
+
+
+    
+    .leaseRate {
+        grid-row: 2;
+        grid-column: 1/3;
+        justify-self: center;
+        
+    }
+    
+    .leasePay {
+        grid-row: 2;
+        grid-column: 3/5;
+        justify-self: center;
+    }
+    
+    .financeRate {
+        grid-row: 2;
+        grid-column: 5/7;
+        justify-self: center;
+    
+    }
+    
+    .financePay {
+        grid-row: 2;
+        grid-column: 7/9;
+        justify-self: center;
+    
+    }
+    
+    .box {
+        display: grid;
+    }
+    
+    .space {
+        justify-self: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media all and (min-width: 900px) {
+    .paymentData {
+        grid-column: 2/8;
+    }
+
+    
+}

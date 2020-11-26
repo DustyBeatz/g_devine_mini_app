@@ -1,0 +1,31 @@
+header {
+    grid-column: 1/9;
+    grid-row: 1;
+    background-color: black;
+    height: 50px;
+    width: 100%;
+}
+
+header img {
+    width:50px;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.selectionMenu {
+    display: inline-block;
+}
+.selectionMenu li {
+    display: inline-block;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+@media all and (max-width:550px) {
+
+    .selectionMenu {
+        display: none;
+    }
+}

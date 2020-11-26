@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Corben&display=swap" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/261e9c7d5def410ce91cfda68fa8cd9e?family=MINI+Sans+Medium" rel="stylesheet" type="text/css"/>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>Mini</title>
@@ -11,9 +14,24 @@
     <main id="app">
         <section class="gridLayout">
         <header>
-            <h1>FINANCING</h1>
+            <img src="images/logo_white.png" alt="mini Logo">
+            <ul class="selectionMenu">    
+                <li>MODELS</li>
+                <li>TOOLS</li>
+                <li>DISCOVER</li>
+                <li>OWNERS</li>
+                <li>PRE-OWNED</li>
+            </ul> 
         </header>
 
+        <video autoplay="" muted="" loop="" poster="https://86bd04aee645f41c2005-510904abdc95bfe9a6b152d3edc0036b.ssl.cf5.rackcdn.com/Public/img/2016-739165/content/model-page/F55/20/header.jpg?v=Mpnb3qubiNTxwRNtArRSouUcQd6q2A-haNG_H_PMglY1" class="not-on-mobile">
+            <source src="https://86bd04aee645f41c2005-510904abdc95bfe9a6b152d3edc0036b.ssl.cf5.rackcdn.com/Public/img/2016-739165/content/model-page/F55/20/header.mp4?v=Mpnb3qubiNTxwRNtArRSouUcQd6q2A-haNG_H_PMglY1" type="video/mp4">
+        </video>
+
+
+        <h2 class="lineUp">Our Line Up</h2>
+
+        <section class="contentBox">
         <nav class="iconNav">
             <ul>
                 <li v-for="car in cars">
@@ -28,30 +46,38 @@
 
         <h2 class="miniName">{{currentMiniData.name}}</h2>
 
+<div class="paymentData">
 
-        <div class="leaseBox">
-            <h3 class="lease">LEASE</h3>
-            <div id="leaseRate">
-                <p>Lease Rating of {{currentMiniData.lease_rate}}</p>
+            <div class="box leaseRate">
+                <p class="space">Lease Rating</p>
+                <p class="space dataText">{{currentMiniData.lease_rate}}</p>
+                <p class="space months">{{currentMiniData.lease_months}}</p>
+
+            </div>
+
+            <div class="box leasePay">
+                <p class="space">Monthly Lease</p>
+                <p class="space dataText">{{currentMiniData.lease_pay}}</p>
+                <p class="space">Per Payment</p>
+
 
             </div>
 
-            <div id="leasePay">
-                <p>With a monthly Payment of {{currentMiniData.lease_pay}}</p>
-
-            </div>
-    </div>
     
-    <div class="financeBox">
-        <h3 class="finanace">FINANCE</h3>
-        <div id="financeRate">
-            <p>Finance Rating of {{currentMiniData.finance_rate}}</p>
+        <div class="box financeRate">
+            <p class="space ">Finance Rating</p>
+            <p class="space dataText">{{currentMiniData.finance_rate}}</p>
+            <p class="space months">{{currentMiniData.finance_months}}</p>
+
         </div>
 
-        <div id="financePay">
-            <p>Monthly Fianace Payment of {{currentMiniData.finance_pay}}</p>
+        <div class="box financePay">
+            <p class="space">Monthly Fianace</p>
+            <p class="space dataText">{{currentMiniData.finance_pay}}</p>
+            <p class="space">Per Payment</p>
         </div>
-    </div>        
+    </div>
+    </section>
     </section>
     </main>
     <script type="module" src="js/main.js"></script>
