@@ -32,7 +32,6 @@ ul {
     margin: 0;
     background-color: #fff;
     margin: 20px;
-    margin-bottom: 0;
 }
 
 .gridLayout {
@@ -48,6 +47,7 @@ video {
     width: 100%;
     height: auto;
     display: none;
+    border-bottom: solid 10px black;
 }
 
 .lineUp {
@@ -105,6 +105,12 @@ video {
 }
 
 
+footer {
+    grid-column: 1/7;
+    background: black;
+    grid-row: 7;
+}
+
 
 //THIS IS THE MEDIA QUERY
 
@@ -156,6 +162,7 @@ video {
         grid-column: 2/8;
         grid-row: 4;
         justify-self: center;
+        font-size: 3vw;
     }
     
     .paymentData {
@@ -165,6 +172,10 @@ video {
         grid-template-columns: repeat(6,1fr);
         gap: 10px;
         padding-bottom: 30px;
+    }
+
+    footer {
+        grid-column: 1/9;
     }
     
     
