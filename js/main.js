@@ -27,11 +27,12 @@ fetchData("./includes/index.php").then(data => this.cars = data).catch(err => co
 		showCarData(target) {
 			console.log("recieved mini data", target, target.name);
 
-			this.showFinanceData = this.showFinanceData ? false : true;
+			this.showFinanceData = true;
 
 			this.currentMiniData = target;
-		}
+		},
+		
 	 }
 
-	}).$mount("#app")
+	}).$mount("#app");
 })();

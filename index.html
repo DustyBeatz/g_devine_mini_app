@@ -29,13 +29,14 @@
         </video>
 
 
-        <h2 class="lineUp">Our Line Up</h2>
+
 
         <section class="contentBox">
+            <h2 class="lineUp">Our Line Up</h2>
         <nav class="iconNav">
             <ul>
                 <li v-for="car in cars">
-                    <img class="carIcon" @click="showCarData(car)" alt="car icon" v-bind:src="car.img">
+                    <img class="carIcon"  @click="showCarData(car)" alt="car icon" v-bind:src="car.img">
                 </li>
             </ul>
         </nav>
@@ -46,16 +47,16 @@
 
         <h2 class="miniName">{{currentMiniData.name}}</h2>
 
-<div class="paymentData">
+    <div class="paymentData" >
 
-            <div class="box leaseRate">
+            <div class="box leaseRate" :class="{'showBox' : showFinanceData}">
                 <p class="space">Lease Rating</p>
                 <p class="space dataText">{{currentMiniData.lease_rate}}</p>
                 <p class="space months">{{currentMiniData.lease_months}}</p>
 
             </div>
 
-            <div class="box leasePay">
+            <div class="box leasePay" :class="{'showBox' : showFinanceData}">
                 <p class="space">Monthly Lease</p>
                 <p class="space dataText">{{currentMiniData.lease_pay}}</p>
                 <p class="space">Per Payment</p>
@@ -64,20 +65,34 @@
             </div>
 
     
-        <div class="box financeRate">
+        <div class="box financeRate" :class="{'showBox' : showFinanceData}">
             <p class="space ">Finance Rating</p>
             <p class="space dataText">{{currentMiniData.finance_rate}}</p>
             <p class="space months">{{currentMiniData.finance_months}}</p>
 
         </div>
 
-        <div class="box financePay">
+        <div class="box financePay" :class="{'showBox' : showFinanceData}">
             <p class="space">Monthly Fianace</p>
             <p class="space dataText">{{currentMiniData.finance_pay}}</p>
             <p class="space">Per Payment</p>
         </div>
     </div>
     </section>
+
+    <div class="desc">
+        <p class="minidesc" :class="{'minidescShow' : showFinanceData}">{{currentMiniData.descript}}</p>
+        <img class="build" src="./images/mini_build.jpg" alt="build_mini">
+        <img class="shop" src="./images/mini_shop.jpg" alt="shop_mini">
+        <img class="right" src="./images/right_mini.jpg" alt="right_mini_4_U">
+
+        <a class="buildA" href="">Build Your Own Mini</a>
+        <a class="shopA" href="">Shop Current Inventory</a>
+        <a class="rightA" href="">Which Mini Is Right For you?</a>
+    </div>
+
+    
+                                
     <footer>
         <ul class="selectionMenu">    
             <li>MODELS</li>
