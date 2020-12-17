@@ -1,4 +1,6 @@
 import {fetchData} from "./modules/DataMiner.js";
+
+
 (()=> {
 	
 
@@ -33,6 +35,5 @@ fetchData("./includes/index.php").then(data => this.cars = data).catch(err => co
 		},
 		
 	 }
-
 	}).$mount("#app");
 })();
